@@ -20,7 +20,7 @@ export default async function DispatchPage() {
 
   const routeIds: string[] = (routes ?? []).map((r: Route) => r.id) || []
 
-  let orders: Order[] = []
+  let orders: any[] = []
   if (routeIds.length > 0) {
     const { data: ordersData, error: ordersError } = await supabase
       .from("orders")
